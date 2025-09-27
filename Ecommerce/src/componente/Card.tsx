@@ -24,12 +24,10 @@ function Card({ producto }: { producto: Producto }) {
       <p>{producto.descripcion}</p>
       <p>${producto.precio}</p>
 
-      {/* Botón para mostrar/ocultar reseñas */}
       <button onClick={() => setMostrarReseñas(!mostrarReseñas)}>
         {mostrarReseñas ? "Ocultar reseñas" : "Ver reseñas"}
       </button>
 
-      {/* Lista de reseñas */}
       {mostrarReseñas && (
         <ul>
           {producto.reseñas.map((r, index) => (
